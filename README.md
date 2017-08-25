@@ -13,6 +13,7 @@
 Please use node 6.x version
 
 #Enviroment variable setup
+
 #For application
 `export API_PORT=4002`
 
