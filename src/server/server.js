@@ -18,6 +18,7 @@ var router = require("./routes/routes");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
+app.use('/api',router)
 const server = createServer(app);
 server.listen(port, () => {
     console.log("server is listing on port: " + port)
