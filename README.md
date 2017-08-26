@@ -23,3 +23,6 @@ Please use node 6.x version
 
 ## Starting application
 `npm start`
+
+## build application
+`npm run build`
