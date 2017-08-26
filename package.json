@@ -41,6 +41,7 @@
     "babel-plugin-transform-runtime": "^6.9.0"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=development nodemon --watch src/server src/server/server.js --exec babel-node"
+    "start": "cross-env NODE_ENV=development nodemon --watch src/server src/server/server.js --exec babel-node",
+    "build": "rm -rf dist && NODE_ENV=production concurrently -c blue,cyan,magenta \"webpack --watch --config build/webpack.config.js\" \"babel ./src/server --out-dir dist/server --copy-files\" \"sleep 30 && NODE_ENV=production node dist/server/server.js\""
   }
 }
